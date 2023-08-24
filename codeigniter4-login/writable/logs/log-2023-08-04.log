@@ -1,0 +1,120 @@
+CRITICAL - 2023-08-04 14:33:40 --> Invalid file: "productos/data.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/data.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/data', [], true)
+ 3 APPPATH\Controllers\Productos.php(15): view('productos/data', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 14:44:11 --> Invalid file: "productos/data.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/data.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/data', [], true)
+ 3 APPPATH\Controllers\Productos.php(15): view('productos/data', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 19:59:35 --> Invalid file: "pdf_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pdf_view.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pdf_view', [], true)
+ 3 APPPATH\Controllers\Productos.php(100): view('pdf_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generate_pdf()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 20:04:37 --> Invalid file: "data.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('data.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('data', [], true)
+ 3 APPPATH\Controllers\Productos.php(100): view('data', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generate_pdf()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 20:04:56 --> Invalid file: "data.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('data.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('data', [], true)
+ 3 APPPATH\Controllers\Productos.php(100): view('data', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generate_pdf()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 20:07:53 --> Undefined variable $productos_deshabilitados
+in APPPATH\Views\productos\data.php on line 237.
+ 1 APPPATH\Views\productos\data.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos_deshabilitados', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php', 237)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/data', [], true)
+ 5 APPPATH\Controllers\Productos.php(100): view('productos/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generate_pdf()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 20:09:57 --> Undefined variable $productos_deshabilitados
+in APPPATH\Views\productos\data.php on line 237.
+ 1 APPPATH\Views\productos\data.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos_deshabilitados', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php', 237)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/data', [], true)
+ 5 APPPATH\Controllers\Productos.php(99): view('productos/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generate_pdf()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 20:13:15 --> Undefined variable $productos_deshabilitados
+in APPPATH\Views\productos\data.php on line 237.
+ 1 APPPATH\Views\productos\data.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos_deshabilitados', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php', 237)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/data', [], true)
+ 5 APPPATH\Controllers\Productos.php(99): view('productos/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generate_pdf()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 20:14:35 --> Undefined variable $productos_deshabilitados
+in APPPATH\Views\productos\data.php on line 237.
+ 1 APPPATH\Views\productos\data.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos_deshabilitados', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php', 237)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/data', [], true)
+ 5 APPPATH\Controllers\Productos.php(100): view('productos/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generate_pdf()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 20:15:51 --> Undefined variable $productos_deshabilitados
+in APPPATH\Views\productos\data.php on line 297.
+ 1 APPPATH\Views\productos\data.php(297): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos_deshabilitados', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php', 297)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\productos\\data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/data', [], true)
+ 5 APPPATH\Controllers\Productos.php(99): view('productos/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generate_pdf()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 21:15:53 --> require_once(tcpdf/tcpdf.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Productos.php on line 94.
+ 1 APPPATH\Controllers\Productos.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(tcpdf/tcpdf.php): Failed to open stream: No such file or directory', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Controllers\\Productos.php', 94)
+ 2 APPPATH\Controllers\Productos.php(94): require_once()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generarReporteProductos()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 21:19:06 --> Class "App\Controllers\TCPDF" not found
+in APPPATH\Controllers\Productos.php on line 98.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generarReporteProductos()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-04 21:22:22 --> Call to undefined method TCPDF::SetAutoPageBreaks()
+in APPPATH\Controllers\Productos.php on line 114.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->generarReporteProductos()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

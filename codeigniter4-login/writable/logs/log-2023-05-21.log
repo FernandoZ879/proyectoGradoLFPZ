@@ -1,0 +1,135 @@
+CRITICAL - 2023-05-21 02:24:13 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:15 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:15 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:16 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:17 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:18 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:18 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:23 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:23 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:25 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:25 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:26 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:27 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:29 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-21 02:24:29 --> Invalid file: "productos/productos_table.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('productos/productos_table.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/productos_table', [], true)
+ 3 APPPATH\Controllers\Productos.php(97): view('productos/productos_table', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getTables()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

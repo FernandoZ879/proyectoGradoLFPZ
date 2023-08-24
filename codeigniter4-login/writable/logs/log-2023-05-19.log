@@ -1,0 +1,6 @@
+CRITICAL - 2023-05-19 21:05:29 --> Class "App\Models\UsuariosModel" not found
+in APPPATH\Controllers\Usuarios.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuarios->register()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

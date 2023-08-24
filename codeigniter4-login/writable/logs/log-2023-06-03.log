@@ -1,0 +1,6 @@
+CRITICAL - 2023-06-03 10:01:16 --> Typed property Config\App::$indexPage must not be accessed before initialization
+in SYSTEMPATH\Helpers\url_helper.php on line 88.
+ 1 SYSTEMPATH\Helpers\url_helper.php(187): _get_uri('usuarios/login')
+ 2 SYSTEMPATH\CodeIgniter.php(548): current_url(true)
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
