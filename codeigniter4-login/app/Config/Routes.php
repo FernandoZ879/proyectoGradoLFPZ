@@ -49,13 +49,27 @@ $routes->get('productos/enable/(:num)', 'Productos::enable/$1', ['filter' => 'au
 $routes->delete('productos/delete/(:num)', 'Productos::delete/$1', ['filter' => 'auth']);
 $routes->get('logout', 'Productos::logout', ['filter' => 'auth']);
 
-$routes->get('productos/generarReporteProductos', 'Productos::generarReporteProductos', ['filter' => 'auth']);
-
 $routes->get('usuarios/login', 'Usuarios::login');
 $routes->post('usuarios/inicioSesion', 'Usuarios::inicioSesion');
 $routes->get('usuarios/register', 'Usuarios::register');
 $routes->post('usuarios/registro', 'Usuarios::registro');
 
+$routes->post('usuarios/verificar', 'Usuarios::verificar');
+$routes->get('usuarios/verificar', 'Usuarios::verificarGet');
+
+$routes->get('productos/generarReporteProductos', 'Productos::generarReporteProductos', ['filter' => 'auth']);
+
+$routes->get('objetos', 'ObjetosAR::index');
+$routes->get('objetos/create', 'ObjetosAR::create');
+$routes->post('objetos/store', 'ObjetosAR::store');
+$routes->get('objetos/edit/(:num)', 'ObjetosAR::edit/$1');
+$routes->put('objetos/update/(:num)', 'ObjetosAR::update/$1');
+$routes->get('objetos/disable/(:num)', 'ObjetosAR::disable/$1');
+$routes->get('objetos/enable/(:num)', 'ObjetosAR::enable/$1');
+$routes->delete('objetos/delete/(:num)', 'ObjetosAR::delete/$1');
+
+$routes->get('cambiar-contrasena', 'Usuarios::cambiarContrasena', ['filter' => 'auth']);
+$routes->post('actualizar-contrasena', 'Usuarios::actualizarContrasena', ['filter' => 'auth']);
 
 
 

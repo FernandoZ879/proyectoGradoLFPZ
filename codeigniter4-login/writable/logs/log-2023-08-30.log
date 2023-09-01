@@ -1,0 +1,159 @@
+CRITICAL - 2023-08-30 19:42:37 --> Undefined array key "activo"
+in APPPATH\Filters\VerificarFilter.php on line 22.
+ 1 APPPATH\Filters\VerificarFilter.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "activo"', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Filters\\VerificarFilter.php', 22)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\VerificarFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('usuarios/verificar', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 19:43:08 --> Undefined array key "activo"
+in APPPATH\Filters\VerificarFilter.php on line 22.
+ 1 APPPATH\Filters\VerificarFilter.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "activo"', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Filters\\VerificarFilter.php', 22)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\VerificarFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('usuarios/verificar', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 19:43:09 --> Undefined array key "activo"
+in APPPATH\Filters\VerificarFilter.php on line 22.
+ 1 APPPATH\Filters\VerificarFilter.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "activo"', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Filters\\VerificarFilter.php', 22)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\VerificarFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('usuarios/verificar', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 19:43:31 --> Undefined array key "activo"
+in APPPATH\Filters\VerificarFilter.php on line 23.
+ 1 APPPATH\Filters\VerificarFilter.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "activo"', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Filters\\VerificarFilter.php', 23)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\VerificarFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('usuarios/verificar', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 19:43:32 --> Undefined array key "activo"
+in APPPATH\Filters\VerificarFilter.php on line 23.
+ 1 APPPATH\Filters\VerificarFilter.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "activo"', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Filters\\VerificarFilter.php', 23)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\VerificarFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('usuarios/verificar', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 19:44:32 --> Undefined array key "activo"
+in APPPATH\Filters\VerificarFilter.php on line 20.
+ 1 APPPATH\Filters\VerificarFilter.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "activo"', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Filters\\VerificarFilter.php', 20)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\VerificarFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('usuarios/verificar', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 19:44:33 --> Undefined array key "activo"
+in APPPATH\Filters\VerificarFilter.php on line 20.
+ 1 APPPATH\Filters\VerificarFilter.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "activo"', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Filters\\VerificarFilter.php', 20)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\VerificarFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('usuarios/verificar', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 19:44:33 --> Undefined array key "activo"
+in APPPATH\Filters\VerificarFilter.php on line 20.
+ 1 APPPATH\Filters\VerificarFilter.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "activo"', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Filters\\VerificarFilter.php', 20)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\VerificarFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('usuarios/verificar', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 19:44:34 --> Undefined array key "activo"
+in APPPATH\Filters\VerificarFilter.php on line 20.
+ 1 APPPATH\Filters\VerificarFilter.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "activo"', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Filters\\VerificarFilter.php', 20)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\VerificarFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('usuarios/verificar', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 21:16:21 --> Cannot access offset of type string on string
+in APPPATH\Views\objetos\index.php on line 14.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('objetos/index', [], true)
+ 4 APPPATH\Controllers\ObjetosAR.php(17): view('objetos/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ObjetosAR->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ObjetosAR))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 21:18:00 --> Cannot access offset of type string on string
+in APPPATH\Views\objetos\index.php on line 14.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('objetos/index', [], true)
+ 4 APPPATH\Controllers\ObjetosAR.php(17): view('objetos/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ObjetosAR->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ObjetosAR))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 21:32:58 --> Undefined variable $productos
+in APPPATH\Views\objetos\index.php on line 181.
+ 1 APPPATH\Views\objetos\index.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('objetos/index', [], true)
+ 5 APPPATH\Controllers\ObjetosAR.php(17): view('objetos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ObjetosAR->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ObjetosAR))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 21:33:31 --> Undefined variable $productos
+in APPPATH\Views\objetos\index.php on line 181.
+ 1 APPPATH\Views\objetos\index.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('objetos/index', [], true)
+ 5 APPPATH\Controllers\ObjetosAR.php(17): view('objetos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ObjetosAR->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ObjetosAR))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 21:33:31 --> Undefined variable $productos
+in APPPATH\Views\objetos\index.php on line 181.
+ 1 APPPATH\Views\objetos\index.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('objetos/index', [], true)
+ 5 APPPATH\Controllers\ObjetosAR.php(17): view('objetos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ObjetosAR->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ObjetosAR))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 21:36:06 --> Undefined variable $productos
+in APPPATH\Views\objetos\index.php on line 181.
+ 1 APPPATH\Views\objetos\index.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('objetos/index', [], true)
+ 5 APPPATH\Controllers\ObjetosAR.php(17): view('objetos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ObjetosAR->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ObjetosAR))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 21:36:07 --> Undefined variable $productos
+in APPPATH\Views\objetos\index.php on line 181.
+ 1 APPPATH\Views\objetos\index.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('objetos/index', [], true)
+ 5 APPPATH\Controllers\ObjetosAR.php(17): view('objetos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ObjetosAR->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ObjetosAR))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 21:36:08 --> Undefined variable $productos
+in APPPATH\Views\objetos\index.php on line 181.
+ 1 APPPATH\Views\objetos\index.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productos', 'D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Programas\\Xampp\\htdocs\\codeigniter4-login\\app\\Views\\objetos\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('objetos/index', [], true)
+ 5 APPPATH\Controllers\ObjetosAR.php(17): view('objetos/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ObjetosAR->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ObjetosAR))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 23:52:44 --> Invalid file: "layouts/main.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/main.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/main', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('usuarios/cambiar_contrasena', [], true)
+ 4 APPPATH\Controllers\Usuarios.php(115): view('usuarios/cambiar_contrasena')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuarios->cambiarContrasenaVista()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -13,6 +13,13 @@
               <?= session()->getFlashdata('error') ?>
             </div>
           <?php endif; ?>
+          <?php if(session()->getFlashdata('success')): ?>
+
+<div class="alert alert-success">
+  <?= session()->getFlashdata('success') ?>  
+</div>
+
+<?php endif; ?>
 
           <form action="<?= base_url('usuarios/inicioSesion') ?>" method="post">
             <div class="form-group">

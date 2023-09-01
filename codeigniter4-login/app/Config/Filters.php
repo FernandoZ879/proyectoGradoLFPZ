@@ -69,5 +69,8 @@ class Filters extends BaseConfig
 
         // Agregar el alias para el filtro de autenticación
         $this->aliases['auth'] = \App\Filters\AuthFilter::class;
+        // Agregar el alias para el filtro verificar
+$this->aliases['verificar'] = \App\Filters\VerificarFilter::class;
+
     }
 }

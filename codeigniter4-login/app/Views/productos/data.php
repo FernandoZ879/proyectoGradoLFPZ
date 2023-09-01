@@ -35,6 +35,11 @@
             <a href="<?= base_url('logout') ?>" class="nav-link">Cerrar sesión</a>
           </li>
         <?php endif; ?>
+        <?php if (session()->has('usuario')) : ?>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="<?= base_url('cambiar-contrasena') ?>" class="nav-link">Cambiar contraseña</a>
+          </li>
+        <?php endif; ?>
       </ul>
 
       <!-- Right navbar links -->
@@ -70,7 +75,7 @@
             <img src="<?= base_url('Templates/dist/img/user2-160x160.jpg') ?>" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Luis Fernando</a>
+            <a href="#" class="d-block"><?= session('nombre_usuario') ?></a>
           </div>
         </div>
 
@@ -103,9 +108,9 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="../tables/simple.html" class="nav-link">
+                  <a href="<?= base_url('objetos') ?>" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Simple Tables</p>
+                    <p>Tabla Modelos 3D</p>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -185,7 +190,7 @@
                           <td><?= $producto['Precio'] ?></td>
                           <td><?= $producto['Cantidad'] ?></td>
                           <td>
-                            <?php if (session()->get('usuario')['tipo_usuario'] === 'administrador') : ?>
+                          <?php if (session()->get('tipo_usuario') === 'administrador') : ?>
                               <form action="<?= base_url('productos/delete/' . $producto['idProducto']) ?>" method="post">
                                 <button type="button" class="btn btn-primary" onclick="location.href='<?= base_url('productos/edit/' . $producto['idProducto']) ?>'">Editar</button>
                                 <?php if ($producto['Estado'] == 1) : ?>
@@ -245,7 +250,7 @@
                           <td><?= $producto['Precio'] ?></td>
                           <td><?= $producto['Cantidad'] ?></td>
                           <td>
-                            <?php if (session()->get('usuario')['tipo_usuario'] === 'administrador') : ?>
+                          <?php if (session()->get('tipo_usuario') === 'administrador') : ?>
                               <form action="<?= base_url('productos/delete/' . $producto['idProducto']) ?>" method="post">
                                 <button type="button" class="btn btn-primary" onclick="location.href='<?= base_url('productos/edit/' . $producto['idProducto']) ?>'">Editar</button>
                                 <?php if ($producto['Estado'] == 1) : ?>
@@ -274,7 +279,7 @@
                   </table>
                 </div>
                 <div class="card-body">
-                  <?php if (session()->get('usuario')['tipo_usuario'] === 'administrador') : ?>
+                <?php if (session()->get('tipo_usuario') === 'administrador') : ?>
                     <div>
                       <button class="btn btn-success" onclick="location.href='<?= base_url('productos/create') ?>'">Agregar producto</button>
                       <button class="btn btn-secondary" id="toggleDisabledBtn1">Mostrar productos deshabilitados</button>
@@ -373,8 +378,7 @@
   <script src="<?= base_url('Templates/plugins/datatables-buttons/js/buttons.colVis.min.js') ?>"></script>
   <!-- AdminLTE App -->
   <script src="<?= base_url('Templates/dist/js/adminlte.min.js') ?>"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="<?= base_url('Templates/dist/js/demo.js') ?>"></script>
+
   <!-- Page specific script -->
   <script>
     $(function() {

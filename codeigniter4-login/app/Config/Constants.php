@@ -96,5 +96,5 @@ define('EVENT_PRIORITY_HIGH', 10);
 
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443 ? 'https://' : 'http://';
 $host = $_SERVER['HTTP_HOST'];
-$subfolder = str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+$subfolder = str_replace($_SERVER['DOCUMENT_ROOT'], '', dirname($_SERVER['SCRIPT_FILENAME']));
 defined('BASE') || define('BASE', $protocol . $host . $subfolder);
