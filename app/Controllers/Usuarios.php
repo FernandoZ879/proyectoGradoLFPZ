@@ -63,6 +63,35 @@ class Usuarios extends BaseController
         // Redirigir al usuario a la página donde puede ingresar el código de verificación
         return redirect()->to('usuarios/verificar');
     }
+    public function reenviarCodigo()
+    {
+        // Obtener el modelo de usuarios
+        $usuariosModel = new UsuariosModel();
+
+        // Obtener el usuario actualmente autenticado
+        $usuarioId = session()->get('usuario_id');
+        $usuario = $usuariosModel->find($usuarioId);
+
+        // Generar un nuevo código de verificación y guardarlo en la base de datos
+        $codigoVerificacion = mt_rand(10000000, 99999999);
+        $usuariosModel->update($usuarioId, [
+            'codigo_verificacion' => $codigoVerificacion
+        ]);
+
+        // Enviar un correo electrónico al usuario con el nuevo código de verificación
+        $email = \Config\Services::email();
+        $email->setFrom('peredo.luis.885@gmail.com', 'ImaginAR');
+        $email->setTo($usuario['correo_electronico']);
+        $email->setSubject('Verificación de correo electrónico');
+        $email->setMessage("Tu nuevo código de verificación es: {$codigoVerificacion}");
+        if (!$email->send()) {
+            // El correo electrónico no se pudo enviar, mostrar mensaje de error
+            return redirect()->back()->withInput()->with('error', 'No se pudo enviar el correo electrónico de verificación. Por favor, inténtelo de nuevo.');
+        }
+
+        // Redirigir al usuario a la página donde puede ingresar el nuevo código de verificación
+        return redirect()->to('usuarios/verificar')->with('success', 'Se ha enviado un nuevo código de verificación a tu correo electrónico.');
+    }
 
     public function verificar()
     {

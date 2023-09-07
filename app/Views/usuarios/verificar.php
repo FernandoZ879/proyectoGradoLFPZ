@@ -31,8 +31,11 @@
     <button type="submit">Verificar</button>
 </form>
 <button onclick="location.href='<?= base_url('usuarios/reenviar') ?>'">Reenviar código</button>
-        
-
+<?php if (session()->has('success')): ?>
+    <div class="alert alert-success">
+        <?= session('success') ?>
+    </div>
+<?php endif; ?>
 
 <!-- jQuery -->
 <script src="<?= base_url('Templates/plugins/jquery/jquery.min.js') ?>"></script>

@@ -56,7 +56,7 @@ $routes->post('usuarios/registro', 'Usuarios::registro');
 
 $routes->post('usuarios/verificar', 'Usuarios::verificar');
 $routes->get('usuarios/verificar', 'Usuarios::verificarGet');
-$routes->get('usuarios/reenviar', 'Usuarios::reenviarCodigo', ['filter' => 'auth']);
+$routes->get('usuarios/reenviar', 'Usuarios::reenviarCodigo');
 
 
 $routes->get('productos/generarReporteProductos', 'Productos::generarReporteProductos', ['filter' => 'auth']);
