@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1693864219;_ci_previous_url|s:67:"http://localhost/codeigniter4-login/public/index.php/usuarios/login";usuario_id|i:12;_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:1:{s:19:"codigo_verificacion";s:8:"58287505";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"old";s:7:"success";s:3:"old";}success|s:55:"Cuenta verificada exitosamente, vuelva a iniciar sesion";
