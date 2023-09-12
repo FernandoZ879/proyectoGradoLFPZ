@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>MapTiler Geocoding control</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+    <script src="https://cdn.maptiler.com/maptiler-geocoding-control/v0.0.98/leaflet.umd.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-geocoding-control/v0.0.98/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="map">
+        <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img
+                src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
+    </div>
+    <p><a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a
+            href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a></p>
+    <script>
+        const key = 'HYiHa8qjIoFoaJyWXVsF';
+        const map = L.map('map').setView([-17.395741934623658, -66.15805988494635], 16); //starting position
+        L.tileLayer(`https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=${key}`, { //style URL
+            tileSize: 512,
+            zoomOffset: -1,
+            minZoom: 1,
+            attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+            crossOrigin: true
+        }).addTo(map);
+        var ruta = {"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-66.15812602,-17.39569165]},"id":"81c51fef-e467-4273-8d15-24ffc58cdd0f","properties":{"name":"Instituto alvarez plata"}},{"type":"Feature","geometry":{"type":"LineString","coordinates":[[-66.15812602,-17.39569165],[-66.16080521,-17.38249966],[-66.15997765,-17.38194682],[-66.16095888,-17.37810487],[-66.16149485,-17.37862974]]},"id":"da7b5f74-060c-47b7-bb83-c92fcd54d49f","properties":{"name":""}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-66.16149485,-17.37862974]},"id":"254382d5-b0c8-488f-a489-4d5d2a15170e","properties":{"name":"ruta"}}]}
+L.geoJSON(ruta).addTo(map);
+        var marker = L.marker([-17.395741934623658, -66.15805988494635]).addTo(map);
+        var marker = L.marker([-17.378251108750362, -66.16191871100368]).addTo(map);
+ marker.bindPopup("<b> Instituto </b><br> Federico Alvarez Plata").openPopup();
+  marker.bindPopup("<b> jhony es gei").openPopup();
+
+        // var circle = L.circle([51.508, -0.11], {
+        //     color: ' red',
+        //     fillCo1or: '#f03',
+        //     fi11opacity: 0.5,
+        //     radius: 500
+        // }).addTo(map);
+        // var polygon = L.polygon([
+        //     [51.509, -0.088],
+        //     [51.503, -0.06],
+        //     [51.51, -0.047]
+        // ]).addTo(map);
+        // marker.bindPopup("<b> Hey There! </b><br> I am a marker").openPopup();
+
+    </script>
+</body>
+
+</html>

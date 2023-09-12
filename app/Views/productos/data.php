@@ -2,403 +2,755 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CRUD</title>
-
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?= base_url('Templates/plugins/fontawesome-free/css/all.min.css') ?>">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="<?= base_url('Templates/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') ?>">
-  <link rel="stylesheet" href="<?= base_url('Templates/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') ?>">
-  <link rel="stylesheet" href="<?= base_url('Templates/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') ?>">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="<?= base_url('Templates/dist/css/adminlte.min.css') ?>">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url('assets/img/apple-icon.png') ?>">
+  <link rel="icon" type="image/png" href="<?= base_url('assets/img/favicon.png') ?>">
+  <title>
+    Tablas
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="<?= base_url('assets/css/nucleo-icons.css" rel="stylesheet') ?>" />
+  <link href="<?= base_url('assets/css/nucleo-svg.css" rel="stylesheet') ?>" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="<?= base_url('assets/css/material-dashboard.css?v=3.1.0') ?>" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
 
-<body class="hold-transition sidebar-mini">
-  <div class="wrapper">
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-      <!-- Left navbar links -->
+<body class="g-sidenav-show  bg-gray-200">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
+        <img src="<?= base_url('assets/img/logo-ct.png') ?>" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold text-white"><?= session('nombre_usuario') ?></span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="<?= base_url('/') ?>" class="nav-link">Inicio</a>
-        </li>
-        <?php if (session()->has('usuario')) : ?>
-          <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?= base_url('logout') ?>" class="nav-link">Cerrar sesión</a>
-          </li>
-        <?php endif; ?>
-        <?php if (session()->has('usuario')) : ?>
-          <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?= base_url('usuarios/cambiarContrasena') ?>" class="nav-link">Cambiar contraseña</a>
-          </li>
-        <?php endif; ?>
-      </ul>
-
-      <!-- Right navbar links -->
-      <ul class="navbar-nav ml-auto">
-
-        <li class="nav-item">
-          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-            <i class="fas fa-expand-arrows-alt"></i>
+          <a class="nav-link text-white " href="<?= base_url('pages/dashboard.html') ?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">dashboard</i>
+            </div>
+            <span class="nav-link-text ms-1">Dashboard</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
+          <a class="nav-link text-white active bg-gradient-primary" href="<?= base_url('pages/tables.html') ?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">table_view</i>
+            </div>
+            <span class="nav-link-text ms-1">Tables</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="<?= base_url('pages/billing.html') ?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">receipt_long</i>
+            </div>
+            <span class="nav-link-text ms-1">Billing</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="<?= base_url('pages/virtual-reality.html') ?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">view_in_ar</i>
+            </div>
+            <span class="nav-link-text ms-1">Virtual Reality</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="<?= base_url('pages/rtl.html') ?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
+            </div>
+            <span class="nav-link-text ms-1">RTL</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="<?= base_url('pages/notifications.html') ?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">notifications</i>
+            </div>
+            <span class="nav-link-text ms-1">Notifications</span>
+          </a>
+        </li>
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="<?= base_url('pages/profile.html') ?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">person</i>
+            </div>
+            <span class="nav-link-text ms-1">Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="<?= base_url('pages/sign-in.html') ?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">login</i>
+            </div>
+            <span class="nav-link-text ms-1">Sign In</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="<?= base_url('pages/sign-up.html') ?>">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">assignment</i>
+            </div>
+            <span class="nav-link-text ms-1">Sign Up</span>
           </a>
         </li>
       </ul>
-    </nav>
-    <!-- /.navbar -->
+    </div>
+    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+      <div class="mx-3">
+      <?php if (session()->has('usuario')) : ?>
 
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-      <!-- Brand Logo -->
-      <a href="../../index3.html" class="brand-link">
-        <img src="<?= base_url('Templates/dist/img/AdminLTELogo.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">WEB 2</span>
-      </a>
+            <a class="btn bg-gradient-primary w-100" href="<?= base_url('logout') ?>" type="button">Cerrar Sesion</a>
+            <?php endif; ?>
+      </div>
+      <div class="mx-3">
+      <?php if (session()->has('usuario')) : ?>
 
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar user (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="image">
-            <img src="<?= base_url('Templates/dist/img/user2-160x160.jpg') ?>" class="img-circle elevation-2" alt="User Image">
-          </div>
-          <div class="info">
-            <a href="#" class="d-block"><?= session('nombre_usuario') ?></a>
-          </div>
-        </div>
-
-        <!-- SidebarSearch Form -->
-        <div class="form-inline">
-          <div class="input-group" data-widget="sidebar-search">
-            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-            <div class="input-group-append">
-              <button class="btn btn-sidebar">
-                <i class="fas fa-search fa-fw"></i>
-              </button>
+            <a class="btn bg-gradient-primary w-100" href="<?= base_url('usuarios/cambiarContrasena') ?>" type="button"> Cambiar Contraseña</a>
+            <?php endif; ?>
+      </div>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Tables</li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">Tables</h6>
+        </nav>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            <div class="input-group input-group-outline">
+              <label class="form-label">Type here...</label>
+              <input type="text" class="form-control">
             </div>
           </div>
-        </div>
-
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-
-
-            <li class="nav-item menu-open">
-              <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-table"></i>
-                <p>
-                  Tablas
-                  <i class="fas fa-angle-left right"></i>
-                </p>
+          <ul class="navbar-nav  justify-content-end">
+          
+          
+            <li class="mt-2">
+              <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/material-dashboard on GitHub">Star</a>
+            </li>
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                </div>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="<?= base_url('objetos') ?>" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tabla Modelos 3D</p>
+            </li>
+            <li class="nav-item px-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0">
+                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown pe-2 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bell cursor-pointer"></i>
+              </a>
+              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="<?= base_url('assets/img/team-2.jpg') ?>" class="avatar avatar-sm  me-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New message</span> from Laur
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          13 minutes ago
+                        </p>
+                      </div>
+                    </div>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="../tables/data.html" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>DataTables</p>
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="<?= base_url('assets/img/small-logos/logo-spotify.svg') ?>" class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New album</span> by Travis Scott
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          1 day
+                        </p>
+                      </div>
+                    </div>
                   </a>
                 </li>
-                
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>credit-card</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(453.000000, 454.000000)">
+                                  <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
+                                  <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          Payment successfully completed
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          2 days
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
               </ul>
             </li>
-            <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
-
+            <li class="nav-item d-flex align-items-center">
+              <a href="<?= base_url('pages/sign-in.html') ?>" class="nav-link text-body font-weight-bold px-0">
+                <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none">Sign In</span>
+              </a>
+            </li>
           </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
-    </aside>
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
-            <div class="col-sm-6">
-              <h1>Productos</h1>
-            </div>
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="<?= base_url('/') ?>">Inicio</a></li>
-                <li class="breadcrumb-item active">DataTables</li>
-              </ol>
-            </div>
-          </div>
-        </div><!-- /.container-fluid -->
-      </section>
-
-      <!-- Main content -->
-      <section class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">Lista de Productos</h3>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body">
-<!-- Vista con botón para generar reporte -->
-<button onclick="location.href='<?= base_url('productos/generarReporteProductos') ?>'">Generar Reporte PDF</button>
-
-                  <table id="example2" class="table table-bordered table-hover">
-                    <thead>
-                      <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php foreach ($productos as $producto) : ?>
-                        <tr>
-                          <td><?= $producto['idProducto'] ?></td>
-                          <td><?= $producto['Nombre'] ?></td>
-                          <td><?= $producto['Precio'] ?></td>
-                          <td><?= $producto['Cantidad'] ?></td>
-                          <td>
-                          <?php if (session()->get('tipo_usuario') === 'administrador') : ?>
-                              <form action="<?= base_url('productos/delete/' . $producto['idProducto']) ?>" method="post">
-                                <button type="button" class="btn btn-primary" onclick="location.href='<?= base_url('productos/edit/' . $producto['idProducto']) ?>'">Editar</button>
-                                <?php if ($producto['Estado'] == 1) : ?>
-                                  <button type="button" class="btn btn-warning" onclick="location.href='<?= base_url('productos/disable/' . $producto['idProducto']) ?>'">Deshabilitar</button>
-                                <?php else : ?>
-                                  <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('productos/enable/' . $producto['idProducto']) ?>'">Habilitar</button>
-                                <?php endif; ?>
-                                <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                              </form>
-                            <?php endif; ?>
-                          </td>
-                        </tr>
-                      <?php endforeach; ?>
-
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Acciones</th>
-                      </tr>
-                    </tfoot>
-                  </table>
-                </div>
-               
-                <!-- /.card-body -->
-
-
-
-              </div>
-              <!-- /.card -->
-
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">Lista de Productos</h3>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body">
-                  <table id="example1" class="table table-bordered table-hover">
-                    <thead>
-                      <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php foreach ($productos as $producto) : ?>
-                        <tr>
-                          <td><?= $producto['idProducto'] ?></td>
-                          <td><?= $producto['Nombre'] ?></td>
-                          <td><?= $producto['Precio'] ?></td>
-                          <td><?= $producto['Cantidad'] ?></td>
-                          <td>
-                          <?php if (session()->get('tipo_usuario') === 'administrador') : ?>
-                              <form action="<?= base_url('productos/delete/' . $producto['idProducto']) ?>" method="post">
-                                <button type="button" class="btn btn-primary" onclick="location.href='<?= base_url('productos/edit/' . $producto['idProducto']) ?>'">Editar</button>
-                                <?php if ($producto['Estado'] == 1) : ?>
-                                  <button type="button" class="btn btn-warning" onclick="location.href='<?= base_url('productos/disable/' . $producto['idProducto']) ?>'">Deshabilitar</button>
-                                <?php else : ?>
-                                  <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('productos/enable/' . $producto['idProducto']) ?>'">Habilitar</button>
-                                <?php endif; ?>
-                                <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                              </form>
-                            <?php endif; ?>
-                          </td>
-                        </tr>
-                      <?php endforeach; ?>
-
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Acciones</th>
-                      </tr>
-                    </tfoot>
-                  </table>
-                </div>
-                <div class="card-body">
-                <?php if (session()->get('tipo_usuario') === 'administrador') : ?>
-                    <div>
-                      <button class="btn btn-success" onclick="location.href='<?= base_url('productos/create') ?>'">Agregar producto</button>
-                      <button class="btn btn-secondary" id="toggleDisabledBtn1">Mostrar productos deshabilitados</button>
-                    </div>
-
-                    <div id="productosDeshabilitados1" style="display: none;">
-                      <div class="card-header">
-                        <h3 class="card-title">Productos deshabilitados</h3>
-                      </div>
-                      <table id="example1" class="table table-bordered table-hover">
-                        <thead>
-                          <tr class="table-header-dark">
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Precio</th>
-                            <th>Cantidad</th>
-                            <th>Acciones</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <?php foreach ($productos_deshabilitados as $producto) : ?>
-                            <tr>
-                              <td><?= $producto['idProducto'] ?></td>
-                              <td><?= $producto['Nombre'] ?></td>
-                              <td><?= $producto['Precio'] ?></td>
-                              <td><?= $producto['Cantidad'] ?></td>
-                              <td>
-                                <form action="<?= base_url('productos/delete/' . $producto['idProducto']) ?>" method="post">
-                                  <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('productos/enable/' . $producto['idProducto']) ?>'">Activar</button>
-                                  <input type="hidden" name="_method" value="DELETE">
-                                  <button type="submit" class="btn btn-danger">Eliminar</button>
-                                </form>
-                              </td>
-                            </tr>
-                          <?php endforeach; ?>
-                        </tbody>
-                      </table>
-                    </div>
-                  <?php endif; ?>
-
-                  <script>
-                    document.getElementById("toggleDisabledBtn1").addEventListener("click", function() {
-                      var productosDeshabilitadosDiv = document.getElementById("productosDeshabilitados1");
-                      var display = productosDeshabilitadosDiv.style.display;
-                      productosDeshabilitadosDiv.style.display = display === "none" ? "block" : "none";
-                    });
-                  </script>
-                </div>
-                <!-- /.card-body -->
-
-
-
-              </div>
-              <!-- /.card -->
-            </div>
-            <!-- /.col -->
-          </div>
-          <!-- /.row -->
         </div>
-        <!-- /.container-fluid -->
-      </section>
-      <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <div class="float-right d-none d-sm-block">
-        <b>Version</b> 3.2.0
       </div>
-      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-    </footer>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Lista de Usuarios</h6>
+              </div>
+            </div>
+           
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr class="table-header-dark">
+            <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Tipo</th>
+      <th>Activo</th>
+      <th>Imagen</th>
+      <th>Edad</th>
+      <th>Fecha Nacimiento</th>
+      <th>Dirección</th>
+      <th>Sexo</th>
+      <?php if (session()->get('tipo_usuario') === 'administrador') : ?>
+                    <th>Acciones</th>
+                <?php endif; ?>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($usuarios as $usuario) : ?>
+                <tr class="table-header-dark">
+                <td><?= $usuario['id']; ?></td>
+          <td><?= $usuario['nombre_usuario']; ?></td>
+          <td><?= $usuario['correo_electronico']; ?></td>
+          <td><?= $usuario['tipo_usuario']; ?></td>
+          <td><?= $usuario['activo'] ? 'Sí' : 'No'; ?></td>
+          <td>
+            <?php if(!empty($usuario['imagen_usuario'])): ?>
+              <img src="data:image/jpeg;base64,<?= base64_encode($usuario['imagen_usuario']) ?>" alt="Imagen de usuario" />
+            <?php else: ?>
+              Sin imagen
+            <?php endif; ?>
+          </td>
+          <td><?= $usuario['edad']; ?></td>
+        <td><?= $usuario['fecha_nacimiento']; ?></td>
+        <td><?= $usuario['direccion']; ?></td>
+        <td><?= $usuario['sexo']; ?></td>
+                   
+                    <?php if (session()->get('tipo_usuario') === 'administrador') : ?>
+                        <td>
+                            <form action="<?= base_url('usuarios/delete/' . $usuario['id']) ?>" method="post">
+                                <div class="btn-group d-flex justify-content-between">
+                                    <button type="button" class="btn btn-primary" onclick="location.href='<?= base_url('usuarios/edit/' . $usuario['id']) ?>'">Editar</button>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
-  </div>
-  <!-- ./wrapper -->
+                                    <?php if ($usuario['activo'] == 1) : ?>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='<?= base_url('usuarios/disable/' . $usuario['id']) ?>'">Deshabilitar</button>
 
-  <!-- jQuery -->
-  <script src="<?= base_url('Templates/plugins/jquery/jquery.min.js') ?>"></script>
-  <!-- Bootstrap 4 -->
-  <script src="<?= base_url('Templates/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
-  <!-- DataTables  & Plugins -->
-  <script src="<?= base_url('Templates/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/datatables-responsive/js/dataTables.responsive.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/datatables-buttons/js/dataTables.buttons.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/jszip/jszip.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/pdfmake/pdfmake.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/pdfmake/vfs_fonts.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/datatables-buttons/js/buttons.html5.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/datatables-buttons/js/buttons.print.min.js') ?>"></script>
-  <script src="<?= base_url('Templates/plugins/datatables-buttons/js/buttons.colVis.min.js') ?>"></script>
-  <!-- AdminLTE App -->
-  <script src="<?= base_url('Templates/dist/js/adminlte.min.js') ?>"></script>
+                                    <?php else : ?>
+                                        <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('usuarios/enable/' . $usuario['id']) ?>'">Habilitar</button>
 
-  <!-- Page specific script -->
-  <script>
-    $(function() {
-      $("#example1").DataTable({
-        "responsive": true,
-        "lengthChange": false,
-        "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
+                                    <?php endif; ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </div>
+                            </form>
+                        </td>
+                    <?php endif; ?>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+<?php if (session()->get('tipo_usuario') === 'administrador') : ?>
+    <div class="btn">
+        <button class="btn btn-success" onclick="location.href='<?= base_url('usuarios/create') ?>'">Agregar usuario</button>
+        <button class="btn btn-secondary" id="toggleDisabledBtn">Mostrar usuarios deshabilitados</button>
+    </div>
+
+    <div id="usuariosDeshabilitados" style="display: none;">
+        <h2 class="my-4">Usuarios Deshabilitados</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr class="table-header-dark">
+                    <th>ID</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Tipo</th>
+      <th>Activo</th>
+      <th>Imagen</th>
+      <th>Edad</th>
+      <th>Fecha Nacimiento</th>
+      <th>Dirección</th>
+      <th>Sexo</th>
+        <th>Acciones</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($usuarios as $usuario) : ?>
+                <tr class="table-header-dark">
+                <td><?= $usuario['id']; ?></td>
+          <td><?= $usuario['nombre_usuario']; ?></td>
+          <td><?= $usuario['correo_electronico']; ?></td>
+          <td><?= $usuario['tipo_usuario']; ?></td>
+          <td><?= $usuario['activo'] ? 'Sí' : 'No'; ?></td>
+          <td>
+            <?php if(!empty($usuario['imagen_usuario'])): ?>
+              <img src="data:image/jpeg;base64,<?= base64_encode($usuario['imagen_usuario']) ?>" alt="Imagen de usuario" />
+            <?php else: ?>
+              Sin imagen
+            <?php endif; ?>
+          </td>
+          <td><?= $usuario['edad']; ?></td>
+        <td><?= $usuario['fecha_nacimiento']; ?></td>
+        <td><?= $usuario['direccion']; ?></td>
+        <td><?= $usuario['sexo']; ?></td>
+
+                            <td>
+                                <form action="<?= base_url('usuarios/delete/' . $usuario['id']) ?>" method="post">
+                                    <div class="btn-group d-flex justify-content-between">
+                                        <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('usuarios/enable/' . $usuario['id']) ?>'">Activar</button>
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<?php endif; ?>
+<script>
+    document.getElementById("toggleDisabledBtn").addEventListener("click", function() {
+        var usuariosDeshabilitadosDiv = document.getElementById("usuariosDeshabilitados");
+        var display = usuariosDeshabilitadosDiv.style.display;
+        usuariosDeshabilitadosDiv.style.display = display === "none" ? "block" : "none";
     });
+</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Projects table</h6>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center justify-content-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Project</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Budget</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Completion</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="<?= base_url('assets/img/small-logos/logo-asana.svg') ?>" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Asana</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">working</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">60%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="<?= base_url('assets/img/small-logos/github.svg') ?>" class="avatar avatar-sm rounded-circle me-2" alt="invision">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Github</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$5,000</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">done</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">100%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="<?= base_url('assets/img/small-logos/logo-atlassian.svg') ?>" class="avatar avatar-sm rounded-circle me-2" alt="jira">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Atlassian</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$3,400</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">canceled</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">30%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="30" style="width: 30%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="<?= base_url('assets/img/small-logos/bootstrap.svg') ?>" class="avatar avatar-sm rounded-circle me-2" alt="webdev">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Bootstrap</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$14,000</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">working</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">80%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80" style="width: 80%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="<?= base_url('assets/img/small-logos/logo-slack.svg') ?>" class="avatar avatar-sm rounded-circle me-2" alt="slack">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Slack</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$1,000</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">canceled</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">0%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="<?= base_url('assets/img/small-logos/devto.svg') ?>" class="avatar avatar-sm rounded-circle me-2" alt="xd">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Devto</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$2,300</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">done</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">100%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer py-4  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>,
+                made with <i class="fa fa-heart"></i> by
+                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
+                for a better web.
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                <li class="nav-item">
+                  <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <div class="fixed-plugin">
+    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
+      <i class="material-icons py-2">settings</i>
+    </a>
+    <div class="card shadow-lg">
+      <div class="card-header pb-0 pt-3">
+        <div class="float-start">
+          <h5 class="mt-3 mb-0">Material UI Configurator</h5>
+          <p>See our dashboard options.</p>
+        </div>
+        <div class="float-end mt-4">
+          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+            <i class="material-icons">clear</i>
+          </button>
+        </div>
+        <!-- End Toggle Button -->
+      </div>
+      <hr class="horizontal dark my-1">
+      <div class="card-body pt-sm-3 pt-0">
+        <!-- Sidebar Backgrounds -->
+        <div>
+          <h6 class="mb-0">Sidebar Colors</h6>
+        </div>
+        <a href="javascript:void(0)" class="switch-trigger background-color">
+          <div class="badge-colors my-2 text-start">
+            <span class="badge filter bg-gradient-primary active" data-color="primary" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+          </div>
+        </a>
+        <!-- Sidenav Type -->
+        <div class="mt-3">
+          <h6 class="mb-0">Sidenav Type</h6>
+          <p class="text-sm">Choose between 2 different sidenav types.</p>
+        </div>
+        <div class="d-flex">
+          <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark" onclick="sidebarType(this)">Dark</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent" onclick="sidebarType(this)">Transparent</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
+        </div>
+        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
+        <!-- Navbar Fixed -->
+        <div class="mt-3 d-flex">
+          <h6 class="mb-0">Navbar Fixed</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
+          </div>
+        </div>
+        <hr class="horizontal dark my-3">
+        <div class="mt-2 d-flex">
+          <h6 class="mb-0">Light / Dark</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+          </div>
+        </div>
+        <hr class="horizontal dark my-sm-4">
+        <a class="btn bg-gradient-info w-100" href="https://www.creative-tim.com/product/material-dashboard-pro">Free Download</a>
+        <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard">View documentation</a>
+        <div class="w-100 text-center">
+          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/material-dashboard on GitHub">Star</a>
+          <h6 class="mt-3">Thank you for sharing!</h6>
+          <a href="https://twitter.com/intent/tweet?text=Check%20Material%20UI%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
+          </a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
+            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="<?= base_url('assets/js/core/popper.min.js') ?>"></script>
+  <script src="<?= base_url('assets/js/core/bootstrap.min.js') ?>"></script>
+  <script src="<?= base_url('assets/js/plugins/perfect-scrollbar.min.js') ?>"></script>
+  <script src="<?= base_url('assets/js/plugins/smooth-scrollbar.min.js') ?>"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
   </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="<?= base_url('assets/js/material-dashboard.min.js?v=3.1.0') ?>"></script>
 </body>
 
 </html>
