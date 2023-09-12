@@ -8,12 +8,12 @@ class Usuarios extends BaseController
 {
     public function login()
     {
-        return view('usuarios/loginRegister');
+        return view('usuarios/login');
     }
 
     public function register()
     {
-        return view('usuarios/loginRegister');
+        return view('usuarios/register');
     }
 
     public function registro()
@@ -24,7 +24,7 @@ class Usuarios extends BaseController
         // Validar los datos del formulario de registro
         if (!$this->validate('register')) {
             // Los datos de registro no son válidos, mostrar errores de validación
-            return view('usuarios/loginRegister', [
+            return view('usuarios/register', [
                 'validation' => $this->validator,
                 'nombre_usuario' => $this->request->getPost('nombre_usuario'),
                 'correo_electronico' => $this->request->getPost('correo_electronico')
@@ -105,8 +105,8 @@ class Usuarios extends BaseController
             return redirect()->back()->withInput()->with('error', 'Código de verificación inválido. Por favor, inténtelo de nuevo.');
         }
         $usuariosModel->update($usuario['id'], ['activo' => 1]);
-        return redirect()->back()->withInput()->with('success', 'Cuenta verificada exitosamente, vuelva a iniciar sesion');
-    }
+// Redirigir al usuario a la página de inicio de sesión
+return redirect()->to('usuarios/login')->with('success', 'Cuenta verificada exitosamente, vuelva a iniciar sesión');    }
 
     public function verificarGet()
     {
@@ -187,4 +187,125 @@ class Usuarios extends BaseController
         // Redirigir al usuario a la página de inicio de sesión con un mensaje de éxito
         return redirect()->to('usuarios/login')->with('success', 'La contraseña ha sido cambiada exitosamente. Por favor, inicie sesión de nuevo.');
     }
+
+    public function inicio()
+    {
+        $model = new UsuariosModel();
+        
+        $data['titulo'] = 'Lista de Usuarios';
+        $data['usuarios'] = $model->where('activo', 1)->findAll();
+                $data['usuarios_deshabilitados'] = $model->where('activo', 0)->findAll();
+
+        return view('productos/data.php', $data);
+    }
+
+    public function create()
+    {
+        $data['titulo'] = 'Crear Usuario';
+    
+        return view('usuarios/create', $data);
+    }
+
+    public function store()
+    {
+        $model = new UsuariosModel();
+
+        $data = [
+            'nombre_usuario' => $this->request->getVar('nombre_usuario'),
+            'correo_electronico' => $this->request->getVar('correo_electronico'), 
+            'contrasena' => password_hash($this->request->getVar('contrasena'), PASSWORD_DEFAULT),
+            'tipo_usuario' => $this->request->getVar('tipo_usuario'),
+            'activo' => 1,
+            'edad' => $this->request->getVar('edad'), 
+            'fecha_nacimiento' => $this->request->getVar('fecha_nacimiento'),
+            'direccion' => $this->request->getVar('direccion'),
+            'sexo' => $this->request->getVar('sexo')
+          ];
+        
+          $imagen = $this->request->getFile('imagen');
+          if($imagen->isValid() && !$imagen->hasMoved()) {
+            $data['imagen_usuario'] = file_get_contents($imagen->getTempName()); 
+          }
+    
+        $model->insert($data);
+
+        return redirect()->to(base_url('usuarios'));
+    }
+
+    public function edit($id = null) 
+    {
+        $model = new UsuariosModel();
+        $data['usuario'] = $model->find($id);
+        $data['titulo'] = 'Editar Usuario';
+    
+        return view('usuarios/edit', $data);
+    }
+
+    public function update($id = null)
+    {
+        $model = new UsuariosModel();
+        
+        $data = [
+            'nombre_usuario' => $this->request->getVar('nombre_usuario'),
+            'correo_electronico' => $this->request->getVar('correo_electronico'),
+            'tipo_usuario' => $this->request->getVar('tipo_usuario'),
+            'edad' => $this->request->getVar('edad'),
+            'fecha_nacimiento' => $this->request->getVar('fecha_nacimiento'), 
+            'direccion' => $this->request->getVar('direccion'),
+            'sexo' => $this->request->getVar('sexo')
+          ];
+        
+          if($this->request->getFile('imagen')) {
+            $imagen = $this->request->getFile('imagen');
+            if($imagen->isValid() && !$imagen->hasMoved()) {
+              $data['imagen_usuario'] = file_get_contents($imagen->getTempName());
+            }
+          }
+        
+        if($this->request->getVar('contrasena')) {
+            $data['contrasena'] = password_hash($this->request->getVar('contrasena'), PASSWORD_DEFAULT);
+        }
+
+        $model->update($id, $data);
+
+        return redirect()->to(base_url('usuarios'));
+    }
+
+    public function delete($id = null)
+    {
+        $model = new UsuariosModel();
+        $model->delete($id);
+        return redirect()->to(base_url('usuarios'));
+    }
+
+    public function disable($id = null)
+    {
+        $model = new UsuariosModel();
+        
+        $data = [
+            'activo' => 0
+        ];
+        
+        $model->update($id, $data);
+
+        return redirect()->to(base_url('usuarios'));
+    }
+
+    public function enable($id = null)
+    {
+        $model = new UsuariosModel();
+        
+        $data = [
+            'activo' => 1
+        ];
+        
+        $model->update($id, $data);
+
+        return redirect()->to(base_url('usuarios'));
+    }
+
+
+
+
+    
 }
