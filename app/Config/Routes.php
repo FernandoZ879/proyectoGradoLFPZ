@@ -38,8 +38,8 @@ $routes->get('productos/edit/(:num)', 'Productos::edit/$1');
 $routes->put('productos/update/(:num)', 'Productos::update/$1');
 $routes->delete('productos/delete/(:num)', 'Productos::delete/$1'); */
 
-
-$routes->get('/', 'Productos::index', ['filter' => 'auth']);
+$routes->get('/', 'Usuarios::inicio', ['filter' => 'auth']);
+//$routes->get('/', 'Productos::index', ['filter' => 'auth']);
 $routes->get('productos/create', 'Productos::create', ['filter' => 'auth']);
 $routes->post('productos/store', 'Productos::store', ['filter' => 'auth']);
 $routes->get('productos/edit/(:num)', 'Productos::edit/$1', ['filter' => 'auth']);
@@ -73,6 +73,15 @@ $routes->delete('objetos/delete/(:num)', 'ObjetosAR::delete/$1');
 $routes->post('usuarios/cambiarContrasena', 'Usuarios::cambiarContrasena', ['filter' => 'auth']);
 $routes->get('usuarios/cambiarContrasena', 'Usuarios::cambiarContrasenaVista', ['filter' => 'auth']);
 
+
+//$routes->get('usuarios', 'UsuariosController::index');
+$routes->get('usuarios/create', 'Usuarios::create');
+$routes->post('usuarios/store', 'Usuarios::store');
+$routes->get('usuarios/edit/(:num)', 'Usuarios::edit/$1');
+$routes->put('usuarios/update/(:num)', 'Usuarios::update/$1');
+$routes->get('usuarios/disable/(:num)', 'Usuarios::disable/$1');
+$routes->get('usuarios/enable/(:num)', 'Usuarios::enable/$1');
+$routes->delete('usuarios/delete/(:num)', 'Usuarios::delete/$1');
 
 
 
